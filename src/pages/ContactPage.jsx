@@ -82,8 +82,8 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen pt-32 pb-20">
+      <div className="w-full max-w-sm sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         {/* ... your header section remains the same ... */}
         <motion.div
           className="text-center mb-16"
@@ -91,7 +91,9 @@ export default function ContactPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-5xl font-bold mb-4">Get In Touch</h1>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-4 sm:mb-6 lg:mb-8">
+            Get In Touch
+          </h1>
           <p className="text-slate-400 text-lg">Let's connect and explore opportunities for collaboration</p>
           <motion.div
             className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto mt-6 rounded-full"
@@ -99,74 +101,74 @@ export default function ContactPage() {
           />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 2xl:gap-12">
           {/* ... your contact info section remains the same ... */}
-           <motion.div
-            className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-8 border border-slate-700 space-y-6"
+          <motion.div
+            className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl lg:rounded-2xl p-6 sm:p-8 lg:p-10 2xl:p-12 border border-slate-700 space-y-6 sm:space-y-8"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-           {[
-             { icon: Mail, label: 'Email', value: 'rajrohith.003@gmail.com', href: 'mailto:rajrohith.003@gmail.com' },
-             { icon: null, label: 'Phone', value: '+91 63619 39226', href: 'tel:+916361939226' },
-             { icon: null, label: 'Location', value: 'Bengaluru, Karnataka, India', href: null }
-           ].map((contact, idx) => (
-             <motion.div
-               key={idx}
-               initial={{ opacity: 0, y: 10 }}
-               animate={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.4, delay: idx * 0.1 }}
-             >
-               <h3 className="text-lg font-bold text-cyan-400 mb-3 flex items-center gap-2">
-                 {contact.icon && <contact.icon className="w-5 h-5" />}
-                 {contact.label}
-               </h3>
-               {contact.href ? (
-                 <a
-                   href={contact.href}
-                   className="text-slate-300 hover:text-cyan-400 transition text-lg"
-                 >
-                   {contact.value}
-                 </a>
-               ) : (
-                 <p className="text-slate-300 text-lg">{contact.value}</p>
-               )}
-             </motion.div>
-           ))}
+            {[
+              { icon: Mail, label: 'Email', value: 'rajrohith.003@gmail.com', href: 'mailto:rajrohith.003@gmail.com' },
+              { icon: null, label: 'Phone', value: '+91 63619 39226', href: 'tel:+916361939226' },
+              { icon: null, label: 'Location', value: 'Bengaluru, Karnataka, India', href: null }
+            ].map((contact, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+              >
+                <h3 className="text-lg font-bold text-cyan-400 mb-3 flex items-center gap-2">
+                  {contact.icon && <contact.icon className="w-5 h-5" />}
+                  {contact.label}
+                </h3>
+                {contact.href ? (
+                  <a
+                    href={contact.href}
+                    className="text-slate-300 hover:text-cyan-400 transition text-lg"
+                  >
+                    {contact.value}
+                  </a>
+                ) : (
+                  <p className="text-slate-300 text-lg">{contact.value}</p>
+                )}
+              </motion.div>
+            ))}
 
-           <motion.div
-             className="pt-6 border-t border-slate-700"
-             initial={{ opacity: 0 }}
-             animate={{ opacity: 1 }}
-             transition={{ duration: 0.6, delay: 0.4 }}
-           >
-             <h3 className="text-lg font-bold text-cyan-400 mb-4">Connect With Me</h3>
-             <div className="flex gap-4">
-               {[
-                 { icon: Github, href: 'https://github.com/rohithrajv007' },
-                 { icon: Linkedin, href: 'https://linkedin.com/in/rohith-v-raj' },
-                 { icon: Mail, href: 'mailto:rajrohith.003@gmail.com' }
-               ].map((social, idx) => (
-                 <motion.a
-                   key={idx}
-                   href={social.href}
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   className="p-4 bg-slate-700/50 hover:bg-cyan-500/20 hover:border-cyan-500 border border-slate-600 rounded-lg transition"
-                   whileHover={{ scale: 1.2, rotate: 5 }}
-                   whileTap={{ scale: 0.9 }}
-                 >
-                   <social.icon className="w-6 h-6" />
-                 </motion.a>
-               ))}
-             </div>
-           </motion.div>
+            <motion.div
+              className="pt-6 border-t border-slate-700"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <h3 className="text-lg font-bold text-cyan-400 mb-4">Connect With Me</h3>
+              <div className="flex gap-4">
+                {[
+                  { icon: Github, href: 'https://github.com/rohithrajv007' },
+                  { icon: Linkedin, href: 'https://linkedin.com/in/rohith-v-raj' },
+                  { icon: Mail, href: 'mailto:rajrohith.003@gmail.com' }
+                ].map((social, idx) => (
+                  <motion.a
+                    key={idx}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-4 bg-slate-700/50 hover:bg-cyan-500/20 hover:border-cyan-500 border border-slate-600 rounded-lg transition"
+                    whileHover={{ scale: 1.2, rotate: 5 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <social.icon className="w-6 h-6" />
+                  </motion.a>
+                ))}
+              </div>
+            </motion.div>
           </motion.div>
 
           <motion.form
             onSubmit={handleContactSubmit}
-            className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-8 border border-slate-700 space-y-4"
+            className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl lg:rounded-2xl p-6 sm:p-8 lg:p-10 2xl:p-12 border border-slate-700 space-y-4 sm:space-y-6"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -179,7 +181,7 @@ export default function ContactPage() {
                 name="name" // Add name attribute
                 value={formState.name}
                 onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition"
+                className="w-full px-3 sm:px-4 lg:px-6 py-2 sm:py-3 lg:py-4 bg-slate-800/50 border border-slate-600 rounded-lg text-white text-sm sm:text-base focus:border-cyan-500 transition placeholder-slate-500 focus:outline-none"
                 placeholder="Your name"
                 required
                 whileFocus={{ scale: 1.02 }}
@@ -194,7 +196,7 @@ export default function ContactPage() {
                 name="email" // Add name attribute
                 value={formState.email}
                 onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition"
+                className="w-full px-3 sm:px-4 lg:px-6 py-2 sm:py-3 lg:py-4 bg-slate-800/50 border border-slate-600 rounded-lg text-white text-sm sm:text-base focus:border-cyan-500 transition placeholder-slate-500 focus:outline-none"
                 placeholder="your.email@example.com"
                 required
                 whileFocus={{ scale: 1.02 }}
@@ -208,7 +210,7 @@ export default function ContactPage() {
                 name="message" // Add name attribute
                 value={formState.message}
                 onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition resize-none"
+                className="w-full px-3 sm:px-4 lg:px-6 py-2 sm:py-3 lg:py-4 bg-slate-800/50 border border-slate-600 rounded-lg text-white text-sm sm:text-base focus:border-cyan-500 transition placeholder-slate-500 focus:outline-none resize-none"
                 placeholder="Your message..."
                 rows="5"
                 required
@@ -218,7 +220,7 @@ export default function ContactPage() {
 
             <motion.button
               type="submit"
-              className={`w-full py-3 rounded-lg font-semibold transition transform ${
+              className={`w-full py-3 sm:py-4 lg:py-5 2xl:py-6 rounded-lg font-semibold transition transform text-sm sm:text-base lg:text-lg ${
                 submissionStatus === 'success' ? 'bg-green-500 text-white' :
                 submissionStatus === 'error' ? 'bg-red-500 text-white' :
                 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:shadow-lg hover:shadow-cyan-500/50'

@@ -8,7 +8,7 @@ import { experience, certifications } from '../data/experience';
 export default function AboutPage() {
   return (
     <div className="min-h-screen pt-32 pb-20 px-6 bg-slate-950">
-      <div className="max-w-6xl mx-auto">
+      <div className="w-full max-w-sm sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         {/* Header */}
         <motion.div
           className="text-center mb-20"
@@ -16,7 +16,9 @@ export default function AboutPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">About Me</h1>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-4 sm:mb-6 lg:mb-8">
+            About Me
+          </h1>
           <motion.div
             className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto mt-6 rounded-full"
             layoutId="underline"
@@ -24,22 +26,24 @@ export default function AboutPage() {
         </motion.div>
 
         {/* Summary Section */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-24">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 2xl:gap-12 mb-16 sm:mb-20 lg:mb-24">
           <motion.div
-            className="lg:col-span-2 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-10 border border-slate-700 hover:border-cyan-500/50 transition"
+            className="lg:col-span-2 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl lg:rounded-2xl p-6 sm:p-8 lg:p-10 2xl:p-12 border border-slate-700 hover:border-cyan-500/50 transition"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-6 text-cyan-400">Professional Summary</h2>
-            <div className="space-y-4">
-              <p className="text-slate-300 leading-relaxed text-lg">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8 text-cyan-400">
+              Professional Summary
+            </h2>
+            <div className="space-y-3 sm:space-y-4 lg:space-y-6">
+              <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-slate-300 leading-relaxed">
                 I'm a Computer Science graduate with a Data Science specialization, passionate about building intelligent systems and production-grade solutions. With expertise in AI/ML, LLMs, and full-stack development, I've successfully delivered commercial products that generate 1000+ leads weekly and achieved 94% accuracy in medical AI applications.
               </p>
-              <p className="text-slate-300 leading-relaxed text-lg">
+              <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-slate-300 leading-relaxed">
                 My journey combines hands-on problem-solving with continuous learning. I specialize in architecting scalable systems, fine-tuning LLMs for domain-specific applications, and mentoring technical teams on best practices in full-stack development and machine learning.
               </p>
-              <p className="text-slate-300 leading-relaxed text-lg">
+              <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-slate-300 leading-relaxed">
                 Currently at Champions Group, I'm building multi-agent LLM systems and automation platforms that solve real-world business challenges at scale.
               </p>
             </div>
@@ -47,7 +51,7 @@ export default function AboutPage() {
 
           {/* Stats Cards */}
           <motion.div
-            className="space-y-4"
+            className="space-y-3 sm:space-y-4 lg:space-y-6"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}

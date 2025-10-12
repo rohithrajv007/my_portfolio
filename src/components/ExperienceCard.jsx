@@ -5,7 +5,7 @@ import { Briefcase, MapPin } from 'lucide-react';
 export default function ExperienceCard({ experience }) {
   return (
     <motion.div
-      className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-8 border border-slate-700 hover:border-cyan-500/50 transition"
+      className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl lg:rounded-2xl p-6 sm:p-8 lg:p-10 2xl:p-12 border border-slate-700 hover:border-cyan-500/50 transition"
       whileHover={{ scale: 1.02 }}
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
@@ -14,7 +14,7 @@ export default function ExperienceCard({ experience }) {
       <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
         <div>
           <motion.h3
-            className="text-2xl font-bold text-cyan-400 flex items-center gap-2"
+            className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-cyan-400 flex items-center gap-2"
             whileHover={{ x: 5 }}
           >
             <Briefcase className="w-6 h-6" /> {experience.role}
@@ -24,13 +24,13 @@ export default function ExperienceCard({ experience }) {
             <MapPin className="w-4 h-4" /> {experience.location}
           </p>
         </div>
-        <span className="text-slate-400 font-semibold mt-4 md:mt-0">{experience.period}</span>
+        <span className="text-xs sm:text-sm lg:text-base text-slate-400 font-semibold mt-4 md:mt-0">{experience.period}</span>
       </div>
       <ul className="space-y-2">
         {experience.highlights.map((highlight, i) => (
           <motion.li
             key={i}
-            className="flex items-start gap-3 text-slate-300"
+            className="flex items-start gap-3 text-xs sm:text-sm lg:text-base text-slate-300"
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: i * 0.1 }}

@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 export default function Footer() {
   return (
-    <footer className="py-8 px-6 border-t border-slate-800 text-center text-slate-500 bg-slate-950/50">
+    <footer className="py-6 sm:py-8 lg:py-10 2xl:py-12 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 border-t border-slate-800 text-center text-slate-500 bg-slate-950/50">
       <motion.p
-        className="mb-4"
+        className="mb-4 text-xs sm:text-sm lg:text-base"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -13,7 +13,7 @@ export default function Footer() {
         © 2025 Rohith Raj. AI Engineer | Data Scientist | Full-Stack Developer
       </motion.p>
       <motion.div
-        className="flex justify-center gap-4 text-sm"
+        className="flex justify-center gap-2 sm:gap-3 lg:gap-4 text-xs sm:text-sm lg:text-base"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.1 }}

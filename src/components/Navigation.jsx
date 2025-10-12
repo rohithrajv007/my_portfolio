@@ -29,7 +29,7 @@ export default function Navigation({ currentPage, navigateTo }) {
             <motion.button
               key={item.id}
               onClick={() => navigateTo(item.id)}
-              className={`transition duration-300 font-medium relative ${
+              className={`transition duration-300 font-medium text-xs sm:text-sm lg:text-base relative ${
                 currentPage === item.id
                   ? 'text-cyan-400'
                   : 'text-slate-300 hover:text-cyan-400'
@@ -66,7 +66,7 @@ export default function Navigation({ currentPage, navigateTo }) {
                 navigateTo(item.id);
                 setMenuOpen(false);
               }}
-              className="block w-full text-left px-4 py-2 hover:bg-slate-800 rounded transition text-slate-300"
+              className="block w-full text-left px-4 py-2 hover:bg-slate-800 rounded transition text-slate-300 text-sm sm:text-base"
               whileHover={{ x: 5 }}
             >
               {item.name}

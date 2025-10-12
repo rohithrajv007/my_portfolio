@@ -20,7 +20,7 @@ export default function ContactPage() {
 
     // Create a FormData object to send to the API
     const formData = new FormData(e.target);
-    formData.append("access_key", "2e9b91b1-28d0-46c5-9a38-f24f634a4dcc"); // ❗ Replace with your actual key from Web3Forms
+    formData.append("access_key", "import.meta.env.VITE_WEB3FORMS_ACCESS_KEY"); // ❗ Replace with your actual key from Web3Forms
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
